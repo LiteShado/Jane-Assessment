@@ -23,15 +23,21 @@ function App() {
 
       {/* <Route path="/home" exact component={Home} /> */}
       <Routes>
-      <Route path="/results" exact component={FilteredResults} /> */
+        {/* <Route path="/results" exact component={FilteredResults} /> */}
+        <Route
+          path="/results"
+          render={(props) => <FilteredResults {...props} />}
+        />
+        <Route path="/cart" render={(props) => <Cart {...props} />} />
 
-      <Route path="/cart" exact component={Cart} />
+        <Route path="/myorder" render={(props) => <MyOrder {...props} />} />
 
-      <Route path="/myorder" exact component={MyOrder} />
+        <Route path="/product/:id" render={(props) => <Product {...props} />} />
 
-      <Route path="/product/:id" exact component={Product} />
-
-      <Route path="/order/:id" exact component={OrderDetail} />
+        <Route
+          path="/order/:id"
+          render={(props) => <OrderDetail {...props} />}
+        />
       </Routes>
     </div>
   );
