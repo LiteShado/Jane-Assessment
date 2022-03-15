@@ -1,24 +1,21 @@
 import { Link } from "react-router-dom";
+import "../css/Navbar.css";
 
-const Navbar = () => {
+const Navbar = (props) => {
   return (
-    <div className="nav-main">
-    <nav>
-    <ul>
-        <li><Link className="nav" to="/home">
-          Home
-        </Link></li>
-        <li><Link className="nav" to="/results">
-          All Products
-        </Link></li>
-        <li><Link className="nav" to="/cart">
-          My Cart
-        </Link></li>
-        <li><Link className="nav" to="/myorder">
-          My Order
-        </Link></li>
-      </ul>
-      </nav>
+    <div className="navv">
+      <Link className="nav-link" to="/home">
+        Home
+      </Link>
+      <Link className="nav-link" to="/results">
+        All Products
+      </Link>
+      <Link className="nav-link" to="/cart">
+        My Cart
+      </Link>
+      <Link className="nav-link" to="/myorder">
+        My Order
+      </Link>
     </div>
   );
 };

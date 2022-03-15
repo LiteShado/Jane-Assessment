@@ -1,0 +1,21 @@
+.navv {
+    display: flex;
+    list-style: none;
+    width: 100%;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0 80px;
+    height: 80px;
+    align-items: center;
+    background-color: black;
+    opacity: initial;
+  }
+  .nav-link {
+    color: white;
+    margin: 10px;
+    font-size: larger;
+    font-style: italic;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+  }
