@@ -18,35 +18,37 @@
 
 .nav-main {
   color: black;
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-size: larger;
   transition: all 0.4s;
-	-webkit-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
   -o-transition: all 0.4s;
   -moz-transition: all 0.4s;
 }
 
 .nav-main:focus {
-	outline: none !important;
+  outline: none !important;
 }
 
 .nav-main:hover {
-	text-decoration: none;
+  text-decoration: none;
   color: #57b846;
 }
 li {
-  list-style-type:decimal-leading-zero;
+  list-style-type: decimal-leading-zero;
   list-style-position: outside;
   padding: 6px;
   margin: 4px;
   size: 10px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-.inventory-title{
+.inventory-title {
   font-size: 180%;
 }
-.products-container{
+.products-container {
+  justify-content: center;
+  /* align-items: center; */
   display: grid;
-  grid-template-columns: repeat(2, 4fr);
-  grid-template-rows: repeat(2, 4fr);
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
 }

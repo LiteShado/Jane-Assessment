@@ -14,7 +14,12 @@ const ProductList = ({ product }) => {
           alt="this product"
         />
         <p className="description">{product.description}</p>
-        <p className="product-price">Price: ${product.price_each}0</p>
+        <p className="product-price">
+          Price:{" "}
+          {product.price_each === null
+            ? "no price available"
+            : "$" + product.price_each + "0"}
+        </p>
         <button className="add-button">Add to Cart</button>
         <button className="buy-button">Buy Now</button>
         <p className="divider">__________________</p>

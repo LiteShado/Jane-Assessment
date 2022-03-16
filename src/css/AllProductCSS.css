@@ -49,13 +49,13 @@
   font-size: 125%;
 }
 .buy-button {
-  width: 25%;
-  height: 100%;
+  width: 90px;
+  height: 50px;
   background-color: yellow;
 }
 .add-button {
-  width: 25%;
-  height: 100%;
+  width: 90px;
+  height: 50px;
   background-color: aqua;
 }
 .divider {
