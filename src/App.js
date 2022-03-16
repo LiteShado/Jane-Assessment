@@ -23,7 +23,7 @@ function App() {
         <Navbar />
         <Searchbar placeholder="Enter your search term" data={ProductData} />
         <div className="allproducts-container">
-            <h3>Our Current Inventory</h3>
+            <h1 className="inventory-title">Our Current Inventory</h1>
             <div className="products-container">
                 {ProductData.products.map((product, i) =>
                 <ProductList product={product} key={i} />

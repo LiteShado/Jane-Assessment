@@ -42,3 +42,11 @@ li {
   size: 10px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+.inventory-title{
+  font-size: 180%;
+}
+.products-container{
+  display: grid;
+  grid-template-columns: repeat(2, 4fr);
+  grid-template-rows: repeat(2, 4fr);
+}

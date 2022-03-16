@@ -22,7 +22,7 @@
 }
 
 .product-image {
-  width: 25%;
+  width: 55%;
   justify-content: center;
   align-items: center;
   padding-top: -5%;
@@ -49,14 +49,18 @@
   font-size: 125%;
 }
 .buy-button {
-  width: 10%;
+  width: 25%;
   height: 100%;
   background-color: yellow;
 }
 .add-button {
-  width: 10%;
+  width: 25%;
   height: 100%;
   background-color: aqua;
+}
+.divider {
+  width: 10%;
+  height: 100%;
 }
 
 .single-container {
@@ -67,8 +71,9 @@
   height: 100%;
 }
 .productlist-container {
-  justify-content: flex-start;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .ProductImages {
