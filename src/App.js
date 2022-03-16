@@ -1,4 +1,6 @@
 import "./App.css";
+import { useState, useEffect } from "react";
+
 
 import { Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
@@ -17,11 +19,36 @@ import ProductList from "./components/ProductList";
 
 function App() {
   console.log(ProductData);
+  const [filtered, setFiltered] = useState([]);
+  const [wordEntered, setWordEntered] = useState("");
+
+
+  const handleFilter = (event) => {
+    const searchWord = event.target.value;
+    setWordEntered(searchWord);
+
+
+  const newFilter = ProductData.filter((value) => {
+    return value.title.toLowerCase().includes(searchWord.toLowerCase());
+  })
+
+  if (searchWord === "") {
+      setFiltered([]);
+    } else {
+      setFiltered(newFilter);
+    }
+
+  };
+  const clearInput = () => {
+    setFiltered([]);
+    setWordEntered("");
+  };
+
   return (
     <div className="App">
       <div className="navbar-container">
         <Navbar />
-        <Searchbar placeholder="Enter your search term" data={ProductData} />
+        <Searchbar />
         <div className="allproducts-container">
             <h1 className="inventory-title">Our Current Inventory</h1>
             <div className="products-container">

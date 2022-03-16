@@ -1,8 +1,37 @@
 import { Link } from "react-router-dom";
 import AllProductCSS from "../css/AllProductCSS.css";
+import { useState, useEffect } from "react";
+
 import ProductData from "../data/products.json";
 
 const ProductList = ({ product }) => {
+  const [filtered, setFiltered] = useState([]);
+  const [wordEntered, setWordEntered] = useState("");
+
+
+  const handleFilter = (event) => {
+    const searchWord = event.target.value;
+    setWordEntered(searchWord);
+
+
+  const newFilter = product.filter((value) => {
+    return value.title.toLowerCase().includes(searchWord.toLowerCase());
+  })
+
+  if (searchWord === "") {
+      setFiltered([]);
+    } else {
+      setFiltered(newFilter);
+    }
+
+  };
+  const clearInput = () => {
+    setFiltered([]);
+    setWordEntered("");
+  };
+
+
+
   return (
     <div className="productlist-container">
       {/* <Link to={`/${props.id}`}> */}

@@ -4,26 +4,21 @@ import CloseIcon from "@material-ui/icons/Close";
 import { Link } from "react-router-dom";
 
 import { useState, useEffect } from "react";
-import axios from "axios";
+import ProductData from "../data/products.json";
 
 
-const Searchbar = ({ placeholder, data }) => {
+
+const Searchbar = () => {
   const [filtered, setFiltered] = useState([]);
   const [wordEntered, setWordEntered] = useState("");
   const [allProduct, setAllProduct] = useState([]);
 
-  // const fetchProducts = () => {
-  //   axios.get().then((response) => {
-  //     setAllProduct(response);
-  //   });
-  // };
-  // useEffect(fetchProducts, []);
 
   const handleFilter = (event) => {
     const searchWord = event.target.value;
     setWordEntered(searchWord);
 
-    const newFilter = data.filter((value) => {
+    const newFilter = ProductData.filter((value) => {
       return value.title.toLowerCase().includes(searchWord.toLowerCase());
     });
 
@@ -46,7 +41,7 @@ const Searchbar = ({ placeholder, data }) => {
         <div className="search-input">
           <input
             type="text"
-            placeholder={placeholder}
+            placeholder="Enter your search term"
             value={wordEntered}
             onChange={handleFilter}
           />
