@@ -6,7 +6,7 @@ import AllProductCSS from "../css/AllProductCSS.css";
 const AllProduct = (props) => {
   return (
     // <ProductList />
-    <Searchbar />
+    <ProductList />
   );
 };
 

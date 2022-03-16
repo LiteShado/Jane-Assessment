@@ -17,15 +17,19 @@
   background-image: linear-gradient(to right, orange, red);
 }
 
-.allProducts-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  width: 1600px;
+.allproducts-container {
+  margin: 25px;
 }
 
 .singleProduct-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: 700px;
+}
+.productlist-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
