@@ -5,21 +5,18 @@ import { Link } from "react-router-dom";
 
 import { useState, useEffect } from "react";
 import ProductData from "../data/products.json";
-
-
+import ProductList from "./ProductList";
 
 const Searchbar = () => {
   const [filtered, setFiltered] = useState([]);
   const [wordEntered, setWordEntered] = useState("");
-  const [allProduct, setAllProduct] = useState([]);
-
 
   const handleFilter = (event) => {
     const searchWord = event.target.value;
     setWordEntered(searchWord);
 
     const newFilter = ProductData.filter((value) => {
-      return value.title.toLowerCase().includes(searchWord.toLowerCase());
+      return value.name.toLowerCase().includes(searchWord.toLowerCase());
     });
 
     if (searchWord === "") {
@@ -53,34 +50,31 @@ const Searchbar = () => {
             )}
           </div>
         </div>
-
-        {/* product list */}
-
-        {filtered.length !== 0 && (
-          <div className="results">
-            {filtered.map((product) => {
-              return (
-                <div key={product.id} className="productlist-container">
-                  <Link to={`/${product.id}`}>
-                    <div className="single-container">
-                      <h3 className="product-name">{product.name}</h3>
-                      <img
-                        className="product-image"
-                        src={product.image}
-                        alt="this product"
-                      />
-                      <div className="product-desc">
-                        <p className="description">{product.description}</p>
-                        <p className="product-price">{product.price}</p>
-                      </div>
-                    </div>
-                  </Link>
-                </div>
-              );
-            })}
-          </div>
-        )}
       </div>
+
+
+      <div className="allproducts-container">
+        <h1 className="inventory-title">Current Inventory</h1>
+        <div className="products-container">
+          {filtered.length !== 0 ? (
+            <div className="product-container">
+              {filtered.slice(0, 15).map((product, i) => {
+                return (
+                <ProductList product={product} key={i} />
+              )})}
+            </div>
+          )
+          : (
+          <div className="product-container">
+          {ProductData.products.map((product, i) => {
+            return (
+            <ProductList product={product} key={i} />
+            )})}
+          </div>
+          )}
+        </div>
+      </div>
+
     </div>
   );
 };

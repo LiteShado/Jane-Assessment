@@ -49,13 +49,13 @@ function App() {
       <div className="navbar-container">
         <Navbar />
         <Searchbar />
-        <div className="allproducts-container">
+        {/* <div className="allproducts-container">
             <h1 className="inventory-title">Our Current Inventory</h1>
             <div className="products-container">
                 {ProductData.products.map((product, i) =>
                 <ProductList product={product} key={i} />
                 )}</div>
-        </div>
+        </div> */}
       </div>
 
       {/* <Route path="/home" exact component={Home} /> */}
