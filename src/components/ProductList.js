@@ -13,10 +13,8 @@ const ProductList = ({ product }) => {
           src={product.image_urls[0]}
           alt="this product"
         />
-        <div className="product-desc">
           <p className="description">{product.description}</p>
-          <p className="product-price">{product.price_each}</p>
-        </div>
+          <p className="product-price">Price: ${product.price_each}0</p>
       </div>
       {/* </Link> */}
     </div>
