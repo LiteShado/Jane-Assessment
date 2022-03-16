@@ -29,18 +29,34 @@
   padding-bottom: 5%;
 }
 
-.product-name {
-  padding: 5%;
-}
 .description {
   padding-top: -5%;
-  margin-bottom: 5%;
+  margin-bottom: 1%;
   width: 50%;
+  font-size: 75%;
+  align-items: left;
 }
 .product-price {
   justify-content: flex-start;
   align-items: flex-start;
-  padding-right: 85%;
+  padding-right: 90%;
+  font-size: 85%;
+}
+.product-name {
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-right: 75%;
+  font-size: 125%;
+}
+.buy-button {
+  width: 10%;
+  height: 100%;
+  background-color: yellow;
+}
+.add-button {
+  width: 10%;
+  height: 100%;
+  background-color: aqua;
 }
 
 .single-container {
